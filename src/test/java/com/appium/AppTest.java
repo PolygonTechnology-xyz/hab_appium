@@ -1,25 +1,20 @@
 package com.appium;
 
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-/* import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder; */
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
-import java.util.List;
 
-import org.openqa.selenium.remote.DesiredCapabilities;
+import io.appium.java_client.android.AndroidDriver;
+/* import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder; */
 
 public class AppTest {
 
@@ -68,9 +63,9 @@ public class AppTest {
     WebElement checkbox =  driver.findElement(By.xpath("//*[contains(@class, 'android.widget.CheckBox')]"));
     checkbox.click();
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    
 
-
-    WebElement loginButton = driver.findElement(By.xpath("[@content-desc ='Googleでログイン']"));
+    WebElement loginButton = driver.findElement(By.xpath("//*[contains(@class, 'android.widget.ImageView')]"));
     loginButton.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
   }
