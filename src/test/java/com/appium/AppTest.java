@@ -11,14 +11,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -62,11 +60,11 @@ public class AppTest {
   @Test
   public void Login() {
 
-    driver.findElement(By.className("android.widget.CheckBox")).click();
+    driver.findElement(By.xpath("//*[contains(@class, 'android.widget.CheckBox')]")).click();
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 
-    driver.findElement(AppiumBy.accessibilityId("Googleでログイン")).click();
+    driver.findElement(By.xpath("[@content-desc ='Googleでログイン']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
   }
 
