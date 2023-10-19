@@ -24,9 +24,9 @@ public class AppTest {
 
   public AndroidDriver driver;
   
-
-
   
+
+
   @Before
   public void configAppium() throws MalformedURLException, InterruptedException {
 
@@ -36,6 +36,8 @@ public class AppTest {
 	AndroidDriver driver = new AndroidDriver(new URL("http://192.168.12.172:4723/wd/hub"), options);
 	/home/jarin/document/workspace/appium/hab/hab/src/test/java/com/appium/resources/hab_driver.apk
  */
+
+ String appiumServerURL = "http://192.168.12.172:4723/wd/hub";
 
 
 	//create capabilities
@@ -52,7 +54,7 @@ public class AppTest {
 
 	//create object for android
 
-    driver = new AndroidDriver (new URL("http://192.168.12.172:4723/wd/hub"), desiredCapabilities);
+    driver = new AndroidDriver (new URL(appiumServerURL), desiredCapabilities);
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 
   }
