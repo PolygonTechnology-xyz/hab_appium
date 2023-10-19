@@ -11,6 +11,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -62,11 +63,15 @@ public class AppTest {
   @Test
   public void Login() {
 
-    driver.findElement(By.xpath("//*[contains(@class, 'android.widget.CheckBox')]")).click();
+    //driver.findElement(By.xpath("//*[contains(@class, 'className')]"))
+
+    WebElement checkbox =  driver.findElement(By.xpath("//*[contains(@class, 'android.widget.CheckBox')]"));
+    checkbox.click();
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 
-    driver.findElement(By.xpath("[@content-desc ='Googleでログイン']")).click();
+    WebElement loginButton = driver.findElement(By.xpath("[@content-desc ='Googleでログイン']"));
+    loginButton.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
   }
 
