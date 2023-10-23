@@ -56,36 +56,34 @@ public class AppTest {
   }
 
   @Test
-  public void Login() {
+  public void Login() throws InterruptedException {
 
     //driver.findElement(By.xpath("//*[contains(@class, 'className')]"))
 
     WebElement forgetPass = driver.findElement(By.xpath("//android.view.View[@index = '6']"));
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    Thread.sleep(2000);
     forgetPass.click();
 
 
     WebElement backToLogin = driver.findElement(By.xpath("//android.view.View[@index = '3']"));
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    Thread.sleep(2000);
     backToLogin.click();
 
 
     WebElement useridTextBox =  driver.findElement(By.xpath("//android.widget.EditText[@index = '3']"));
     useridTextBox.click();
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    Thread.sleep(2000);
     useridTextBox.sendKeys("user id");
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+    Thread.sleep(2000);
 
 
     WebElement passwordTextBox = driver.findElement(By.xpath("//android.widget.EditText[@index = '5']")); 
     passwordTextBox.click();
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    Thread.sleep(2000);
     passwordTextBox.sendKeys("password");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    Thread.sleep(2000);
 
     WebElement loginButton = driver.findElement(By.xpath("//android.view.View[@index = '7']"));
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     loginButton.click();
     
   }
