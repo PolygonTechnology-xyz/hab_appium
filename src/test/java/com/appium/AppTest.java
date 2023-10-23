@@ -42,7 +42,7 @@ public class AppTest {
     desiredCapabilities.setCapability("appium:platformVersion", "11");
     desiredCapabilities.setCapability("appium:deviceName", "Pixel 6 API 30");
     desiredCapabilities.setCapability("appium:automationName", "UiAutomator2");
-    desiredCapabilities.setCapability("appium:app", "/home/jarin/Desktop/knower-dev-debug.apk");
+    desiredCapabilities.setCapability("appium:app", "/home/jarin/Desktop/hab_driver.apk");
     desiredCapabilities.setCapability("appium:ensureWebviewsHavePages", true);
     desiredCapabilities.setCapability("appium:nativeWebScreenshot", true);
     desiredCapabilities.setCapability("appium:newCommandTimeout", 3600);
@@ -51,7 +51,7 @@ public class AppTest {
 	//create object for android
 
     driver = new AndroidDriver (new URL(appiumServerURL), desiredCapabilities);
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
   }
 
@@ -60,14 +60,34 @@ public class AppTest {
 
     //driver.findElement(By.xpath("//*[contains(@class, 'className')]"))
 
-    WebElement checkbox =  driver.findElement(By.xpath("//*[contains(@class, 'android.widget.CheckBox')]"));
-    checkbox.click();
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    
+    WebElement forgetPass = driver.findElement(By.xpath("//android.view.View[@index = '6']"));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    forgetPass.click();
 
-    WebElement loginButton = driver.findElement(By.xpath("//*[contains(@class, 'android.widget.ImageView')]"));
-    loginButton.click();
+
+    WebElement backToLogin = driver.findElement(By.xpath("//android.view.View[@index = '3']"));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    backToLogin.click();
+
+
+    WebElement useridTextBox =  driver.findElement(By.xpath("//android.widget.EditText[@index = '3']"));
+    useridTextBox.click();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    useridTextBox.sendKeys("user id");
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+
+
+    WebElement passwordTextBox = driver.findElement(By.xpath("//android.widget.EditText[@index = '5']")); 
+    passwordTextBox.click();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    passwordTextBox.sendKeys("password");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+    WebElement loginButton = driver.findElement(By.xpath("//android.view.View[@index = '7']"));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    loginButton.click();
+    
   }
 
   /* @After

@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-19T19:35:15 BDT" name="Surefire suite" finished-at="2023-10-19T19:35:29 BDT" duration-ms="13683">
+  <suite started-at="2023-10-23T15:31:58 BDT" name="Surefire suite" finished-at="2023-10-23T15:32:12 BDT" duration-ms="13916">
     <groups>
     </groups>
-    <test started-at="2023-10-19T19:35:15 BDT" name="Surefire test" finished-at="2023-10-19T19:35:29 BDT" duration-ms="13683">
+    <test started-at="2023-10-23T15:31:58 BDT" name="Surefire test" finished-at="2023-10-23T15:32:12 BDT" duration-ms="13916">
       <class name="com.appium.AppTest">
-        <test-method signature="Login()" started-at="2023-10-19T19:35:15 BDT" name="Login" finished-at="2023-10-19T19:35:29 BDT" duration-ms="13630" status="PASS">
+        <test-method signature="Login()" started-at="2023-10-23T15:31:58 BDT" name="Login" finished-at="2023-10-23T15:32:12 BDT" duration-ms="13859" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
