@@ -13,9 +13,7 @@ public class AppiumDriverCapabilities {
     public static AppiumDriver <WebElement> driver = null;
     
     @BeforeTest
-    public static AppiumDriver <WebElement> getAppiumDriver() throws MalformedURLException{
-        
-        //AppiumDriver <WebElement> driver = null;
+    public static AppiumDriver <WebElement> getAppiumDriver() throws MalformedURLException{        
 
         String appiumServerURL = "http://192.168.12.172:4723/wd/hub";
 
@@ -24,7 +22,7 @@ public class AppiumDriverCapabilities {
         desiredCapabilities.setCapability("appium:platformVersion", "11");
         desiredCapabilities.setCapability("appium:deviceName", "Pixel 6 API 30");
         desiredCapabilities.setCapability("appium:automationName", "UiAutomator2");
-        desiredCapabilities.setCapability("appium:app", "/home/jarin/Desktop/hab_driver.apk");
+        desiredCapabilities.setCapability("appium:app", "/home/jarin/document/workspace/appium/hab/hab/src/test/java/com/appium/resources/hab_driver.apk");
         desiredCapabilities.setCapability("appium:ensureWebviewsHavePages", true);
         desiredCapabilities.setCapability("appium:nativeWebScreenshot", true);
         desiredCapabilities.setCapability("appium:newCommandTimeout", 3600);

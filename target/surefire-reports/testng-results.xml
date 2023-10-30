@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-30T13:05:52 BDT" name="Surefire suite" finished-at="2023-10-30T13:06:35 BDT" duration-ms="42792">
+  <suite started-at="2023-10-30T15:31:53 BDT" name="Surefire suite" finished-at="2023-10-30T15:32:35 BDT" duration-ms="41518">
     <groups>
     </groups>
-    <test started-at="2023-10-30T13:05:52 BDT" name="Surefire test" finished-at="2023-10-30T13:06:35 BDT" duration-ms="42792">
+    <test started-at="2023-10-30T15:31:53 BDT" name="Surefire test" finished-at="2023-10-30T15:32:35 BDT" duration-ms="41518">
       <class name="com.appium.AppTest">
-        <test-method signature="Login() throws java.lang.InterruptedException,java.net.MalformedURLException" started-at="2023-10-30T13:05:52 BDT" name="Login" finished-at="2023-10-30T13:06:35 BDT" duration-ms="42721" status="PASS">
+        <test-method signature="Login() throws java.lang.InterruptedException,java.net.MalformedURLException" started-at="2023-10-30T15:31:53 BDT" name="Login" finished-at="2023-10-30T15:32:35 BDT" duration-ms="41447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
