@@ -18,22 +18,22 @@ public class AppTest {
 
       AppiumDriver <WebElement> driver = AppiumDriverCapabilities.getAppiumDriver();
       
-      WebElement forgetPass = driver.findElement(By.xpath("//android.view.View[@index = '6']"));
-      Thread.sleep(2000);
+      WebElement forgetPass = driver.findElement(By.xpath("//android.view.View[@index = '5']"));
       forgetPass.click();
+      Thread.sleep(2000);
 
       WebElement backToLogin = driver.findElement(By.xpath("//android.view.View[@index = '3']"));
       Thread.sleep(2000);
       backToLogin.click();
       Thread.sleep(3000);
 
-      WebElement useridTextBox = driver.findElement(By.xpath("//android.widget.EditText[@index = '3']"));
+      WebElement useridTextBox = driver.findElement(By.xpath("//android.widget.EditText[@index = '2']"));
       useridTextBox.click();
       Thread.sleep(2000);
       useridTextBox.sendKeys("+8107000000007");
       Thread.sleep(2000);
 
-      WebElement passwordTextBox = driver.findElement(By.xpath("//android.widget.EditText[@index = '5']")); 
+      WebElement passwordTextBox = driver.findElement(By.xpath("//android.widget.EditText[@index = '4']")); 
       passwordTextBox.click();
       Thread.sleep(2000);
       passwordTextBox.sendKeys("1234567*");
@@ -43,19 +43,19 @@ public class AppTest {
       viewPass.click();
       Thread.sleep(3000);
 
-      WebElement loginButton = driver.findElement(By.xpath("//android.view.View[@index = '7']"));
+      WebElement loginButton = driver.findElement(By.xpath("//android.view.View[@index = '6']"));
       loginButton.click();
       Thread.sleep(3000);
 
-      WebElement nextButton1 = driver.findElement(By.xpath("//android.view.View[@index = '2']"));
+      WebElement nextButton1 = driver.findElement(By.xpath("//android.view.View[@content-desc=\"次へ進む\"]"));
       nextButton1.click();
       Thread.sleep(2000);
       
-      WebElement nextButton2 = driver.findElement(By.xpath("//android.view.View[@index = '3']"));
+      WebElement nextButton2 = driver.findElement(By.xpath("//android.view.View[@index = '2']"));
       nextButton2.click();
       Thread.sleep(2000);
 
-      WebElement nextButton3 = driver.findElement(By.xpath("//android.view.View[@index = '6']"));
+      WebElement nextButton3 = driver.findElement(By.xpath("//android.view.View[@index = '5']"));
       nextButton3.click();
       Thread.sleep(2000);
 
@@ -82,6 +82,27 @@ public class AppTest {
         touchAction.press(startPoint)
                 .waitAction(new WaitOptions().withDuration(Duration.ofSeconds(2)))
                 .moveTo(endPoint).release().perform();
+
+        Thread.sleep(2000);
+        WebElement endenTrips = driver.findElement(By.xpath("//android.view.View[@index = '3']"));
+        endenTrips.click();
+        Thread.sleep(2000);
+
+        touchAction.press(startPoint)
+                .waitAction(new WaitOptions().withDuration(Duration.ofSeconds(2)))
+                .moveTo(endPoint).release().perform();
+
+        Thread.sleep(2000);
+        WebElement profile = driver.findElement(By.xpath("//android.widget.ImageView[@index = '1']"));
+        profile.click();
+        Thread.sleep(2000);
+        
+
+        Thread.sleep(2000);
+        WebElement backbutton2 = driver.findElement(By.xpath("//android.view.View[@index = '0']"));
+        backbutton2.click();
+        Thread.sleep(2000);
+                
 
 
   }
